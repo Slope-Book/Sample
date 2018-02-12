@@ -28,7 +28,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   #   # do something
   # end
   def default_url
-      "default.png"
+      "default.jpg"
   end
 
   include CarrierWave::RMagick
