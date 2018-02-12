@@ -1,5 +1,7 @@
 = div_for user, class: "list-group-item" do |u|
   %h4.user
+    %span.image
+      = image_tag u.image, size: "40x40"
     %span.user-name
       = link_to u.name, user_path(u)
     %span.user-id

@@ -1,6 +1,8 @@
 .user-info
   - if notice
     .alert.alert-info= notice
+  %span.image
+    = image_tag @user.image, size: "80x80"
   %span.user-name
     = render_user_screen_name(@user)
   %span.user-id

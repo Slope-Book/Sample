@@ -1,5 +1,7 @@
 = div_for tweet, class: "list-group-item" do |t|
   %h4.user
+    %span.image
+      = image_tag t.user.image, size: "40x40"
     %span.user-name
       = link_to t.user.name, user_path(t.user)
     %span.user-id

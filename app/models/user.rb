@@ -16,6 +16,7 @@ class User < ApplicationRecord
   validates :password, confirmation: true, length: { in: 6..24 }, if: :password
   validates :password_confirmation, presence: true, if: :password
 
+  mount_uploader :image, ImageUploader
   def followed_by? user
     inverse_follows.where(follower_id: user.id).exists?
   end
